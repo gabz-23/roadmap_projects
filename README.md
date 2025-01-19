@@ -5,7 +5,7 @@ Roadmap.sh.
 
 ## Lista de Proyectos
 
--   [x] Single Page CV
+-   [x] Single Page CV  - https://roadmap.sh/projects/single-page-cv
 -   [ ] Basic HTML Website
 -   [ ] Personal Portfolio
 -   [ ] Changelog Component
