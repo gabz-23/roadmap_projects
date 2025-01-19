@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    padding: 10px;
+}
+body {
+    padding: 50px 40px;
+    border: 2px solid #000000;
+    color: #161616;
+    font-family: 'Poppins', serif;
+    min-height: 100vh;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    color: #468fd3;
+    text-decoration: none;
+}
+
+h1 {
+    border-top: 3px solid #000000;
+    padding-top: 20px;
+}
+article {
+    margin-top: 20px;
+
+    .section-title {
+        color: #2f9e44;
+        font-size: 18px;
+    }
+
+    h3 {
+        color: #1971c2;
+        font-size: 16px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+.profession {
+    color: #2f9e44;
+    font-size: 16px;
+}
