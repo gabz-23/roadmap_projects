@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 95%;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        'testimonial_1  testimonial_2'
+        'testimonial_3 testimonial_3'
+        'testimonial_4 testimonial_4';
+    margin: 40px;
+    gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-areas:
+            'testimonial_1'
+            'testimonial_2'
+            'testimonial_3'
+            'testimonial_4';
+    }
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 0 20px;
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        object-fit: cover;
+    }
+
+    p {
+        font-weight: 600;
+    }
+    p:last-child {
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+
+.testimonial-1 {
+    grid-area: testimonial_1;
+
+    .content {
+        background-color: #202020;
+        color: #fff;
+        padding: 20px;
+        border-radius: 20px;
+        line-height: 1.5;
+        position: relative;
+    }
+    .content::before {
+        content: '';
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: #202020;
+        position: absolute;
+        clip-path: polygon(49% 50%, 0 0, 100% 0);
+        bottom: -30px;
+        left: 30px;
+    }
+}
+.testimonial-2 {
+    grid-area: testimonial_2;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #202020;
+
+    .content {
+        line-height: 1.5;
+    }
+
+    .person {
+        margin-left: 0;
+    }
+}
+.testimonial-3 {
+    grid-area: testimonial_3;
+    display: flex;
+    flex-direction: row;
+
+    .content {
+        background-color: #202020;
+        padding: 40px;
+        border-radius: 20px;
+        color: #e1e1e1;
+        margin-left: 30px;
+    }
+
+    .calification {
+        margin-bottom: 10px;
+
+        img {
+            width: 30px;
+        }
+    }
+
+    .user-name,
+    .user-role {
+        margin-bottom: 10px;
+    }
+
+    .user-name {
+        font-size: 28px;
+    }
+    .user-role {
+        color: #7c7c7c;
+    }
+
+    img {
+        width: 30%;
+        height: 100%;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .testimonial-3 {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .content {
+            margin-top: 30px;
+            width: 100%;
+            margin-left: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.testimonial-4 {
+    grid-area: testimonial_4;
+
+    border: 2px solid #202020;
+    border-radius: 20px;
+    padding: 40px;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .content {
+        text-align: center;
+        line-height: 2;
+    }
+
+    .back,
+    .next {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .next {
+        transform: rotate(180deg);
+    }
+
+    .users-carrousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+
+        ul {
+            display: flex;
+            margin: 0 30px;
+
+            li {
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+            }
+
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    margin-top: 10px;
+                }
+            }
+
+            li:first-child,
+            li:last-child {
+                opacity: 0.3;
+            }
+        }
+
+        img {
+            width: 20px;
+        }
+    }
+}
