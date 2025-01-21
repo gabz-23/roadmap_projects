@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fad3d3;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'days days days'
+        'dates dates dates';
+    grid-template-rows: 40px 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 300px;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    align-items: center;
+    border: 2px solid #202020;
+    position: relative;
+    font-weight: 600;
+    background-color: #fffafa;
+
+    .icon::before {
+        content: '';
+        top: 0;
+        left: 83%;
+        padding-right: 20px;
+        border-left: 2px solid #202020;
+        height: 100%;
+        position: absolute;
+    }
+}
+
+.date-container {
+    border: 1px solid #202020;
+    border-bottom: none;
+    margin-top: 10px;
+    grid-area: days;
+    text-align: center;
+    background-color: #d61f47;
+    padding: 10px 0;
+    font-weight: 600;
+    color: #fffafa;
+}
+
+.month-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+
+    p {
+        margin: 0 15px;
+    }
+
+    button {
+        background: #fad3d3;
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        color: #1f1f1f;
+    }
+}
+.days ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-area: days;
+}
+
+.dates {
+    grid-area: dates;
+    border: 1px solid #202020;
+    background-color: #ffffff;
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+    }
+    li {
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #202020;
+    }
+
+    li:hover {
+        background-color: #d61f47;
+        color: #fffafa;
+        cursor: pointer;
+    }
+}

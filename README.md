@@ -10,6 +10,6 @@ Roadmap.sh.
 -   [x] [Personal Portfolio](https://roadmap.sh/projects/portfolio-website)
 -   [x] [Changelog Component](https://roadmap.sh/projects/changelog-component)
 -   [x] [Testimonials Cards](https://roadmap.sh/projects/testimonial-cards)
--   [ ] Datepicker UI
+-   [x] [Datepicker UI](https://roadmap.sh/projects/datepicker-ui)
 -   [ ] Accessible Form UI
 -   [ ] Image Grid Layout
