@@ -1,6 +1,9 @@
 # Curriculum Vitae (Practica)
 
-[Ir al Sitio](https://singlepagecv.vercel.app/)
+### Vista Previa
 
-### Proyecto realizado de Roadmap: 
-https://roadmap.sh/projects/single-page-cv
+![preview](./assets/app.jpg)
+
+### Sitio Desplegado
+
+[Demo](https://singlepage-cv-gabz.surge.sh/)
