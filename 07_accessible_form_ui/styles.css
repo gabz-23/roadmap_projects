@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    font-family: 'Poppins', serif;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+.error-msg {
+    color: #f73943;
+    font-size: 0.875em;
+    margin-top: 0.3125em;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    display: flex;
+    border: 2px solid #202020;
+    padding: 2.5em;
+    border-radius: 0.9375em;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25em;
+
+    label {
+        font-weight: 600;
+        margin-bottom: 0.5em;
+        color: #202020;
+    }
+
+    input {
+        color: #202020;
+        border: 2px solid #202020;
+        border-radius: 0.625em;
+        padding: 0.625em;
+        font-size: 1.0625em;
+    }
+
+    input.input-error {
+        border-color: #f73943;
+        color: #f73943;
+    }
+
+    input:focus {
+        outline: none;
+        border: 2px solid #096dca;
+    }
+}
+
+.field-password {
+    position: relative;
+}
+
+.input-password {
+    display: flex;
+    align-items: center;
+
+    input {
+        width: 100%;
+    }
+
+    img {
+        position: absolute;
+        right: 0.625em;
+        width: 20px;
+        cursor: pointer;
+    }
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 3.75em;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            font-weight: 500;
+            font-size: 1.25em;
+        }
+
+        .progess-wheel {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: conic-gradient(#09caa0 240deg, #e1e1e1 0deg);
+            margin-bottom: 1.25em;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .progess-wheel::after {
+            content: '';
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            position: absolute;
+        }
+
+        .progess-wheel p {
+            z-index: 1;
+        }
+    }
+
+    .history {
+        background-color: #e0e0e0;
+        line-height: 2.2;
+        padding: 20px;
+        border-radius: 30px;
+
+        li.step-complete {
+            color: #6d6d6d;
+            text-decoration: line-through;
+        }
+    }
+}
+
+.update-btn {
+    padding: 12px 50px;
+    background-color: #111318;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.625em;
+    cursor: pointer;
+    font-size: 1.125em;
+
+    &:hover {
+        background-color: #000000;
+    }
+}
