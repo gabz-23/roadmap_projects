@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Accessible Form UI</title>
+    </head>
+    <body>
+        <main>
+            <form action="#">
+                <div class="field">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="What should we call you?"
+                        aria-required="true"
+                    />
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your email address"
+                        aria-required="true"
+                        class="input-error"
+                    />
+
+                    <span class="error-msg">Email is already taken</span>
+                </div>
+                <div class="field field-password">
+                    <label for="password">Enter Password</label>
+
+                    <div class="input-password">
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="xxxxxxxxxx"
+                            aria-required="true"
+                        />
+
+                        <img src="assets/eye.svg" alt="Mostar/ocultar contraseña" />
+                    </div>
+                </div>
+
+                <div class="field field-password">
+                    <label for="confirm-password">Confirm Password</label>
+
+                    <div class="input-password">
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            placeholder="xxxxxxxxxx"
+                            aria-required="true"
+                        />
+
+                        <img src="assets/eye.svg" alt="Mostar/ocultar contraseña" />
+                    </div>
+                </div>
+
+                <button class="update-btn">Update Profile</button>
+            </form>
+
+            <section class="progress">
+                <header>
+                    <div class="progess-wheel">
+                        <p>65%</p>
+                    </div>
+                    <h2>Profile Completeness</h2>
+                </header>
+
+                <ul class="history">
+                    <li class="step-complete">Create Account</li>
+                    <li class="step-complete">Update Roadmap Progress</li>
+                    <li class="step-complete">Setup Public Profile</li>
+                    <li>Complete Profile</li>
+                    <li>Invite Your Friends</li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>
