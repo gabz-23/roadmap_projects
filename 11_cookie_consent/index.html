@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cookie Consent</title>
+    </head>
+    <body>
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                justify-content: end;
+                align-items: end;
+                height: 100vh;
+            }
+            .alert {
+                display: none;
+                flex-direction: column;
+                align-items: start;
+                justify-content: end;
+                gap: 1rem;
+                margin: 50px;
+                border: 1px solid #8cb3d8;
+                padding: 30px;
+                border-radius: 10px;
+            }
+            .btn-container {
+                display: flex;
+
+                #accept {
+                    margin-right: 1rem;
+                    background-color: #1472ca;
+                    border: none;
+                    padding: 12px 34px;
+                    color: #fff;
+                    border-radius: 8px;
+                    cursor: pointer;
+                }
+
+                #decline {
+                    background-color: #fff;
+                    border: 1px solid #1472ca;
+                    padding: 12px 34px;
+                    color: #1472ca;
+                    border-radius: 8px;
+                    cursor: pointer;
+                }
+            }
+        </style>
+
+        <div class="alert">
+            <h1>Cookie Consent</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="btn-container">
+                <button id="accept">Accept</button>
+                <button id="decline">Decline</button>
+            </div>
+        </div>
+
+        <script>
+            const accept = document.getElementById('accept');
+            const decline = document.getElementById('decline');
+
+            window.addEventListener('load', () => {
+                if (localStorage.getItem('cookieConsent') !== 'true') {
+                    document.querySelector('.alert').style.display = 'flex';
+                }
+            });
+
+            accept.addEventListener('click', () => {
+                localStorage.setItem('cookieConsent', true);
+                document.querySelector('.alert').style.display = 'none';
+            });
+
+            decline.addEventListener('click', () => {
+                localStorage.setItem('cookieConsent', false);
+                document.querySelector('.alert').style.display = 'none';
+            });
+        </script>
+    </body>
+</html>
