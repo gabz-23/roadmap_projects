@@ -12,4 +12,4 @@ Roadmap.sh.
 -   [x] [Testimonials Cards](https://roadmap.sh/projects/testimonial-cards)
 -   [x] [Datepicker UI](https://roadmap.sh/projects/datepicker-ui)
 -   [x] [Accessible Form UI](https://roadmap.sh/projects/accessible-form-ui)
--   [ ] Image Grid Layout
+-   [x] [Image Grid Layout](https://roadmap.sh/projects/image-grid)
