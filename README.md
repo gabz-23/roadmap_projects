@@ -16,3 +16,4 @@ Roadmap.sh.
 -   [x] [Tooltip UI](https://roadmap.sh/projects/tooltip-ui)
 -   [x] [Tabs](https://roadmap.sh/projects/simple-tabs)
 -   [x] [Cookie Consent](https://roadmap.sh/projects/cookie-consent)
+-   [x] [Restricted Textarea](https://roadmap.sh/projects/restricted-textarea)
