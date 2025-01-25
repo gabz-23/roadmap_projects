@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            }
+
+            form {
+                width: 40%;
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-size: 20px;
+                }
+
+                input {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    margin: 10px 0;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                }
+
+                button {
+                    background-color: #096a91;
+                    border: none;
+                    padding: 15px 0;
+                    color: #fff;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 16px;
+                }
+            }
+
+            #result {
+                margin-top: 30px;
+                font-size: 20px;
+                color: #272727;
+            }
+        </style>
+
+        <h1>Age Calculator</h1>
+
+        <form action="#">
+            <label for="birthdate">Enter your birth date:</label>
+            <input type="date" name="birthdate" id="birthdate" />
+            <button type="submit">Calculate</button>
+        </form>
+
+        <span id="result"></span>
+
+        <script>
+            const form = document.querySelector('form');
+            const birthdate = document.querySelector('#birthdate');
+            const res = document.querySelector('#result');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const monthBirth = +birthdate.value.split('-')[1];
+                const dayBirth = +birthdate.value.split('-')[2];
+                const birthdateValue = new Date(birthdate.value).getFullYear();
+
+                const actualDay = new Date().getDate();
+                const actualMoth = new Date().getMonth() || 1;
+                const actualDate = new Date().getFullYear();
+
+                if (actualDay < dayBirth || actualMoth < monthBirth) {
+                    res.innerText = `Your are ${actualDate - birthdateValue - 1} years ${
+                        monthBirth - actualMoth
+                    } months old`;
+                } else {
+                    res.innerText = `Your are ${actualDate - birthdateValue - 1} years ${
+                        monthBirth - actualMoth
+                    } months old`;
+                }
+            });
+        </script>
+    </body>
+</html>

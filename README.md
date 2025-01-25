@@ -18,3 +18,5 @@ Roadmap.sh.
 -   [x] [Cookie Consent](https://roadmap.sh/projects/cookie-consent)
 -   [x] [Restricted Textarea](https://roadmap.sh/projects/restricted-textarea)
 -   [x] [Accordion](https://roadmap.sh/projects/accordion)
+
+-   [x] [Age Calculator](https://roadmap.sh/projects/age-calculator)
