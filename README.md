@@ -20,3 +20,4 @@ Roadmap.sh.
 -   [x] [Accordion](https://roadmap.sh/projects/accordion)
 -   [x] [Age Calculator](https://roadmap.sh/projects/age-calculator)
 -   [x] [Flash Card](https://roadmap.sh/projects/flash-cards)
+-   [x] [Custom Dropdown](https://roadmap.sh/projects/custom-dropdown)
